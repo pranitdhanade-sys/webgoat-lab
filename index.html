@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebGoat Security Lab</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #080d18;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+header {
+    padding: 25px 8%;
+    border-bottom: 1px solid #263449;
+    display: flex;
+    justify-content: space-between;
+}
+.logo { color: #5eead4; font-weight: bold; font-size: 22px; }
+main { max-width: 1000px; margin: 70px auto; padding: 20px; }
+h1 { font-size: 42px; }
+p { color: #9ca3af; line-height: 1.7; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+    margin-top: 35px;
+}
+.card {
+    background: #111c2d;
+    border: 1px solid #263449;
+    border-radius: 12px;
+    padding: 25px;
+}
+.card h2 { color: #5eead4; }
+button {
+    background: #0d9488;
+    border: 0;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+button:hover { background: #14b8a6; }
+.status { color: #fbbf24; font-size: 13px; }
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 30px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">WEBGOAT // LAB</div>
+    <div>CYBERSECURITY TRAINING</div>
+</header>
+
+<main>
+    <p>AUTHORIZED SECURITY TRAINING ENVIRONMENT</p>
+    <h1>Web Application<br>Security Laboratory</h1>
+    <p>
+        Your personal OWASP WebGoat and WebWolf environment.
+        Practice web exploitation, authentication attacks,
+        session security and application vulnerabilities.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>WebGoat</h2>
+            <p>OWASP vulnerable web application for security training.</p>
+            <div class="status">LOCAL SERVICE · PORT 8080</div>
+            <button onclick="window.open('http://localhost:8080/WebGoat','_blank')">
+                Launch WebGoat
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>WebWolf</h2>
+            <p>Companion application for WebGoat security exercises.</p>
+            <div class="status">LOCAL SERVICE · PORT 9090</div>
+            <button onclick="window.open('http://localhost:9090/WebWolf','_blank')">
+                Launch WebWolf
+            </button>
+        </div>
+
+        <div class="card">
+            <h2>Burp Suite</h2>
+            <p>Intercept and inspect HTTP requests and responses.</p>
+            <div class="status">PROXY · PORT 8080 BY DEFAULT</div>
+            <button onclick="window.open('https://portswigger.net/burp','_blank')">
+                Burp Suite
+            </button>
+        </div>
+
+    </div>
+
+    <div class="card" style="margin-top:25px">
+        <h2>Lab modules</h2>
+        <p>
+            Authentication · SQL Injection · XSS · CSRF ·
+            Session Management · Access Control · SSRF · XXE
+        </p>
+    </div>
+
+    <p style="margin-top:30px">
+        Warning: WebGoat is intentionally vulnerable.
+        Keep its services restricted to your local machine.
+    </p>
+</main>
+
+<footer>
+    WEBGOAT LAB // SECURITY THROUGH PRACTICE
+</footer>
+
+</body>
+</html>
